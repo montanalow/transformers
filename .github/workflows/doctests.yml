@@ -3,7 +3,7 @@ name: Doctests
 on:
   push:
     branches:
-      - doctest*
+      - run_fix_doctets_oom
   repository_dispatch:
   schedule:
     - cron: "17 2 * * *"

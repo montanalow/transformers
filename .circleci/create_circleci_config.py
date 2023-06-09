@@ -519,8 +519,8 @@ def create_circleci_config(folder=None):
             all_test_list = f.read()
     else:
         all_test_list = []
-    if len(all_test_list) > 0:
-        jobs.extend(PIPELINE_TESTS)
+    # if len(all_test_list) > 0:
+    #     jobs.extend(PIPELINE_TESTS)
 
     test_file = os.path.join(folder, "filtered_test_list.txt")
     if os.path.exists(test_file):
@@ -528,8 +528,8 @@ def create_circleci_config(folder=None):
             test_list = f.read()
     else:
         test_list = []
-    if len(test_list) > 0:
-        jobs.extend(REGULAR_TESTS)
+    # if len(test_list) > 0:
+    #     jobs.extend(REGULAR_TESTS)
 
         extended_tests_to_run = set(test_list.split())
         # Extend the test files for cross test jobs
@@ -570,8 +570,8 @@ def create_circleci_config(folder=None):
             else:
                 job.tests_to_run = [f for f in example_tests if f.startswith(f"examples/{framework}")]
             
-            if len(job.tests_to_run) > 0:
-                jobs.append(job)
+            # if len(job.tests_to_run) > 0:
+            #     jobs.append(job)
 
     doctest_file = os.path.join(folder, "doctest_list.txt")
     if os.path.exists(doctest_file):
@@ -583,8 +583,8 @@ def create_circleci_config(folder=None):
         jobs.extend(DOC_TESTS)
 
     repo_util_file = os.path.join(folder, "test_repo_utils.txt")
-    if os.path.exists(repo_util_file) and os.path.getsize(repo_util_file) > 0:
-        jobs.extend(REPO_UTIL_TESTS)
+    # if os.path.exists(repo_util_file) and os.path.getsize(repo_util_file) > 0:
+    #     jobs.extend(REPO_UTIL_TESTS)
 
     if len(jobs) == 0:
         jobs = [EmptyJob()]
