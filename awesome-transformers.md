@@ -594,3 +594,9 @@ Keywords: Active Learning, Research, Labeling
 
 Keywords: Data-Centric AI, Data Quality, Noisy Labels, Outlier Detection, Active Learning  
 
+## [PostgresML](https://github.com/postgresml/postgresml)
+
+[PostgresML](https://github.com/postgresml/postgresml) is an AI application database that can run models directly inside along with your indexed data. Download open source models from Huggingface, or train and tune your own, to create and index LLM embeddings, generate text, or make online predictions using only SQL. Then scale your workloads horiztonally with the next gen Postgres proxy: [PgCat](https://github.com/postgresml/pgcat).
+
+Keywords: AI Database, MLOps, Scalability
+
